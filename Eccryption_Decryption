@@ -1,0 +1,28 @@
+
+package eccryption_decryption;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author konstantinosGs
+ */
+public class Eccryption_Decryption {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws Exception {
+        // TODO code application logic here
+        System.out.println("Insert text for Eccryption");
+        Scanner scanner = new Scanner(System.in);
+        String password = scanner.nextLine();
+        String passwordEnc = AESencrp.encrypt(password);
+        String passwordDec = AESencrp.decrypt(passwordEnc);
+
+        System.out.println("Plain Text : " + password);
+        System.out.println("Encrypted Text : " + passwordEnc);
+        System.out.println("Decrypted Text : " + passwordDec);
+    }
+    
+}
