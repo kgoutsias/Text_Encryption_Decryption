@@ -10,6 +10,14 @@ import sun.misc.BASE64Encoder;
  *
  * @author konstantinosGs
  */
+ 
+ /*
+ For encryption we must use a secret key along with an algorithm.
+ In the following example we use an algorithm called AES 128 and 
+ the bytes of the word "TheBestSecretKey" as the secret
+ key (the best secret key we found in this world).
+ AES algorithm can use a key of 128 bits (16 bytes * 8); so we selected that key.
+ */
 class AESencrp {
     private static final String ALGO = "AES";
     private static final byte[] keyValue = 
